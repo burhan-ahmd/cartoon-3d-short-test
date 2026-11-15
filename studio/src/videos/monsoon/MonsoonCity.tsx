@@ -93,7 +93,7 @@ const Captions: React.FC = () => {
   const f = useCurrentFrame(); const sec = f / 30;
   const word = WORDS.find(w => sec >= w.start && sec < w.end)?.text ?? "";
   const [ready, setReady] = useState(false); const [h] = useState(() => delayRender("load caption font"));
-  useEffect(() => { const font = new FontFace("Lilita One", 'url("/fonts/LilitaOne-Regular.ttf")'); font.load().then(face => { (document.fonts as unknown as Set<FontFace>).add(face); setReady(true); continueRender(h); }).catch(cancelRender); }, [h]);
+  useEffect(() => { const font = new FontFace("Lilita One", `url("${staticFile("fonts/LilitaOne-Regular.ttf")}")`); font.load().then(face => { (document.fonts as unknown as Set<FontFace>).add(face); setReady(true); continueRender(h); }).catch(cancelRender); }, [h]);
   if (!ready || !word) return null;
   const age = Math.min(1, Math.max(0, (sec - (WORDS.find(w => w.text === word && sec >= w.start && sec < w.end)?.start ?? sec)) * 30 / 5));
   const pop = .9 + .1 * age + .04 * Math.sin(Math.PI * age);

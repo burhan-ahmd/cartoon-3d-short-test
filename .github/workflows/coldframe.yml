@@ -17,7 +17,7 @@ jobs:
     uses: Razee4315/coldframe/.github/workflows/render.yml@v1
     with:
       composition: ${{ inputs.composition }}
-      chunks: 10
+      chunks: 20
       props: '{}'
       output-name: ${{ inputs.output-name }}
       project-dir: studio
