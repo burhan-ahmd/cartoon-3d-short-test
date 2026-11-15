@@ -8,6 +8,8 @@ __pycache__/
 models/
 !studio/public/moonmarket/models/
 !studio/public/moonmarket/models/*.glb
+!studio/public/monsoon/
+!studio/public/monsoon/**
 *.onnx
 *.bin
 

@@ -5,11 +5,11 @@ on:
       composition:
         description: Remotion composition ID
         required: true
-        default: MoonMarket
+        default: MonsoonCity
       output-name:
         description: MP4 filename
         required: true
-        default: moon-that-got-away.mp4
+        default: street-cleaner-saves-city.mp4
 permissions:
   contents: read
 jobs:
