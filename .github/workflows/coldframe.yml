@@ -1,0 +1,28 @@
+name: Coldframe cloud render
+on:
+  workflow_dispatch:
+    inputs:
+      composition:
+        description: Remotion composition ID
+        required: true
+        default: MoonMarket
+      output-name:
+        description: MP4 filename
+        required: true
+        default: moon-that-got-away.mp4
+permissions:
+  contents: read
+jobs:
+  render:
+    uses: Razee4315/coldframe/.github/workflows/render.yml@v1
+    with:
+      composition: ${{ inputs.composition }}
+      chunks: 10
+      props: '{}'
+      output-name: ${{ inputs.output-name }}
+      project-dir: studio
+      entry-point: src/index.ts
+      gl: swangle
+      frame-timeout: 300000
+      chunk-timeout: 120
+      min-frames-per-chunk: 10

@@ -16,4 +16,9 @@ tmp/
 *.tmp*
 .cache/
 node_modules/
+studio/node_modules/
+studio/out/
+studio/shorts/moonmarket/audio/_cache/
+results/*.mp4
+results/qa/
 .DS_Store
