@@ -6,6 +6,8 @@ __pycache__/
 
 # Large downloaded model weights (Kokoro, Piper, Whisper caches)
 models/
+!studio/public/moonmarket/models/
+!studio/public/moonmarket/models/*.glb
 *.onnx
 *.bin
 
